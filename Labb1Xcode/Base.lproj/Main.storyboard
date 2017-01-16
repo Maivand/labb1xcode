@@ -57,7 +57,7 @@
         <!--View Controller-->
         <scene sceneID="I8u-ll-n9e">
             <objects>
-                <viewController id="kdQ-h5-uLM" sceneMemberID="viewController">
+                <viewController id="kdQ-h5-uLM" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UYR-lL-Zd0"/>
                         <viewControllerLayoutGuide type="bottom" id="RSa-XI-pml"/>
@@ -85,7 +85,7 @@
         <!--View Controller-->
         <scene sceneID="MjL-xp-Anr">
             <objects>
-                <viewController id="VmC-03-afr" sceneMemberID="viewController">
+                <viewController id="VmC-03-afr" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eqe-fd-74Q"/>
                         <viewControllerLayoutGuide type="bottom" id="ffk-vS-mhd"/>
@@ -122,10 +122,16 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="adb-bI-ud1">
                                 <rect key="frame" x="38" y="482" width="244" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="ColorChangeSlider:" destination="VmC-03-afr" eventType="valueChanged" id="eE1-t9-KvK"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="sliderOne" destination="adb-bI-ud1" id="0vQ-3a-6ku"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5He-an-FTg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

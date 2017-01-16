@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UISlider *sliderOne;
 
 @end
 
@@ -25,6 +26,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)ColorChangeSlider:(id)sender {
+    [self refreshColorView];
+    
+}
+
+- (UIColor*)currentColor{
+    return [UIColor colorWithRed:self.sliderOne.value
+                           green:self.sliderOne.value
+                            blue:self.sliderOne.value
+                           alpha:1.0];
+}
+
+-(void)refreshColorView{
+    self.view.backgroundColor = [self currentColor];
+}
 
 
 @end
